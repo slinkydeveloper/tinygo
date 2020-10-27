@@ -1,3 +1,43 @@
+0.16.0
+---
+
+* **command-line**
+  - add initial support for LLVM 11
+  - `build`: improve support for GOARCH=386 and add tests
+  - `gdb`: add support for qemu-user targets
+  - `test`: support non-host tests
+  - `test`: add support for -c and -o flags
+  - `test`: implement some benchmark stubs
+* **compiler**
+  - `builder`: improve detection of clang on Fedora
+  - `compiler`: fix floating point comparison bugs
+  - `loader`: fix linkname in test binaries
+* **standard library**
+  - `machine`: switch default frequency to 4MHz
+  - `os`: add `LookupEnv()` stub
+  - `reflect`: implement `Swapper`
+  - `runtime`: fix UTF-8 decoding
+  - `runtime`: gc: use raw stack access whenever possible
+  - `runtime`: use dedicated printfloat32
+  - `testing`: implement dummy Helper method
+* **targets**
+  - `arm64`: add support for SVCall intrinsic
+  - `esp8266`: implement `Pin.Get` function
+  - `nintendoswitch`: fix crash when printing long lines (> 120)
+  - `nrf`: add I2C error checking
+  - `nrf`: give more flexibility in picking SPI speeds
+  - `nrf`: fix nrf52832 flash size
+  - `stm32f405`: add SPI support
+  - `stm32f405`: add I2C support
+  - `wasi`: add support for this target
+  - `wasi`: use 'generic' ABI by default
+  - `wasi`: remove --no-threads flag from wasm-ld
+  - `wasm`: add instanceof support for WebAssembly
+  - `wasm`: use fixed length buffer for putchar
+* **boards**
+  - `esp32`: use board definitions instead of chip names
+  - `d1mini`: add this ESP8266 based board
+
 0.15.0
 ---
 
